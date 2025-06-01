@@ -1,0 +1,281 @@
+/* General Layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0e0e0; /* Light grey background */
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center the main content */
+    min-height: 100vh;
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; /* For image positioning */
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-container h1 {
+    color: #004d99; /* Darker blue */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.credit-line {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.teacher-image {
+    position: absolute;
+    top: 0;
+    left: 20px; /* Adjust as needed */
+    height: 80px; /* Example size */
+    width: auto;
+}
+
+.watching-text-image {
+    position: absolute;
+    top: 0;
+    right: 20px; /* Adjust as needed */
+    height: 80px; /* Example size */
+    width: auto;
+}
+
+.screen {
+    display: flex;
+    max-width: 1200px; /* Max width for content */
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* For sidebar to behave correctly */
+}
+
+.main-game-area {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f0f8ff; /* Light blue */
+    padding: 30px;
+    border-left: 1px solid #eee;
+}
+
+.sidebar h2 {
+    color: #004d99;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.exercise-progress-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exercise-progress-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    color: #555;
+}
+
+/* Exercise Specifics */
+#exerciseTitle {
+    color: #004d99;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.instructions-box {
+    background-color: #e9f5ff; /* Lighter blue */
+    border: 1px solid #cce7ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.instructions-box p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.instructions-box p:last-child {
+    margin-bottom: 0;
+}
+
+.example-section {
+    background-color: #fff;
+    border: 1px dashed #a0d8ff; /* Dashed border for examples */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.example-section p {
+    margin-bottom: 5px;
+}
+
+/* Controls and Feedback */
+.game-controls {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.small-btn {
+    background-color: #6c757d; /* Grey */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.small-btn:hover {
+    background-color: #5a6268;
+}
+
+.feedback-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+}
+
+.feedback-message.correct {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+    border: 1px solid #c3e6cb;
+}
+
+.feedback-message.incorrect {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+    border: 1px solid #f5c6cb;
+}
+
+.score-display {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.score-display span {
+    font-weight: bold;
+    color: #004d99;
+}
+
+/* Dictionary Lookup */
+.word-lookup-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.word-lookup-section h3 {
+    color: #004d99;
+    margin-top: 0;
+}
+
+.lookup-instruction {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#externalWordLookupInput {
+    width: calc(100% - 100px); /* Adjust width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+#dictionaryIframe {
+    margin-top: 15px;
+}
+
+/* Specific styles for transformation exercises (already added in the head for convenience) */
+.transformation-question {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.transformation-question p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.transformation-question .given-word {
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 10px;
+    display: block;
+}
+.transformation-input {
+    width: 70%;
+    padding: 8px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.input-sentence-part {
+    display: inline;
+    font-size: 1em;
+}
+.feedback-line {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: none;
+}
+.feedback-line.correct {
+    background-color: #e6ffe6;
+    color: #006600;
+    border: 1px solid #00cc00;
+}
+.feedback-line.incorrect {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #ff0000;
+}
+.word-count {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+}
